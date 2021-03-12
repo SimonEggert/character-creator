@@ -12,6 +12,12 @@
   margin-bottom: 32px;
   white-space: nowrap;
   overflow-x: auto;
+  /*
+   Fixes scrolling space on the right of controlColumn.
+   Hidden buttons of last controlPane are somehow used for 
+   calculating scrollable area without this being set ¯\_(ツ)_/¯
+  */
+  position: relative;
 }
 
 .title {
@@ -24,4 +30,13 @@
   font-size: 0.875rem;
   font-weight: 400;
   color: hsl(0deg, 0%, 30%);
+}
+
+@media (max-width: 768px) {
+  .controlPane {
+    display: inline-block;
+    max-width: calc(100vw - 32px);
+    margin: 16px;
+    opacity: 0.97;
+  }
 }

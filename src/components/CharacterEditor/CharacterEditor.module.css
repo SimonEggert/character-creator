@@ -33,6 +33,10 @@
   right: 32px;
 }
 
+.controlsWrapper {
+  isolation: isolate;
+}
+
 .controlColumn {
   width: 50%;
 }
@@ -44,4 +48,27 @@
   bottom: 0;
   left: 0;
   background-color: hsl(195deg, 20%, 86%);
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: none;
+  }
+
+  .characterWrapper {
+    right: auto;
+    max-height: 80%;
+  }
+
+  .controlColumn {
+    overflow-x: auto;
+    position: fixed;
+    bottom: 15%;
+    right: 0;
+    left: 0;
+    width: auto;
+    /* Increase touchable area of outer scroll container */
+    padding: 16px 0;
+    white-space: nowrap;
+  }
 }
