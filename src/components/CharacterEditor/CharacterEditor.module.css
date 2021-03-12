@@ -24,8 +24,8 @@
 
 .characterWrapper {
   position: fixed;
-  top: 0;
-  bottom: 0;
+  top: 15%;
+  bottom: 5%;
   margin-top: auto;
   margin-bottom: auto;
   width: 35%;
